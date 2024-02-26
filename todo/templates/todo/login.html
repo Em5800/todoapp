@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>TODO LOGIN</title>
+  </head>
+  <body class="bg-black flex items-center justify-center h-screen">
+    <div
+      class="bg-gray-900 pt-16 pl-12 pr-12 pb-16 flex flex-col items-center justify-center rounded-lg"
+    >
+      <div>
+        <h5 class="text-blue-500 tracking-wide font-bold text-lg">
+          TODO LOGIN
+        </h5>
+      </div>
+      <form action="#" method="POST" class="flex flex-col">
+        {% csrf_token %}
+        <div class="flex flex-col items-start justify-start pt-6 space-y-6">
+          <label for="username" class="text-white uppercase">Username</label>
+          <input
+            class="w-80 rounded-lg active:outline-none rounded-8 py-1 px-4"
+            required
+            type="text"
+            placeholder="Enter your username"
+            name="username"
+            id="username"
+          />
+        </div>
+        <div class="flex flex-col items-start justify-start pt-6 space-y-6">
+          <label for="password" class="text-white uppercase">Password</label>
+          <input
+            class="w-64 rounded-lg active:outline-none rounded-8 py-1 px-4"
+            required
+            type="password"
+            placeholder="Enter your password"
+            name="password"
+            id="password"
+          />
+        </div>
+        <div class="items-center justify-center py-12">
+          <button
+            class="w-48 bg-blue-500 text-white uppercase rounded-lg py-2"
+            type="submit"
+            value="login"
+          >
+            login
+          </button>
+        </div>
+      </form>
+      <div class="flex flex-row space-x-2">
+        <span class="text-white">Dont have an account?</span>
+        <a href="{%url 'register'%}" class="text-blue-500">Register</a>
+      </div>
+    </div>
+  </body>
+</html>
